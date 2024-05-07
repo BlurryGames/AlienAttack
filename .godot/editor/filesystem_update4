@@ -3,3 +3,5 @@ res://Scenes/player.tscn
 res://Scripts/Player.gd
 res://Scenes/rocket.tscn
 res://Scripts/Rocket.gd
+res://Scenes/enemy.tscn
+res://Scripts/Enemy.gd
