@@ -2,7 +2,7 @@ class_name Player extends CharacterBody2D
 
 var speed: float = 300.0
 
-func _physics_process(delta: float)-> void:
+func _physics_process(_delta: float)-> void:
 	velocity = Vector2.ZERO
 	
 	if Input.is_action_pressed("MoveRight"):
