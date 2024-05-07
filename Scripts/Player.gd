@@ -4,6 +4,7 @@ var speed: float = 300.0
 
 func _physics_process(delta: float)-> void:
 	velocity = Vector2.ZERO
+	
 	if Input.is_action_pressed("MoveRight"):
 		velocity.x = speed
 	if Input.is_action_pressed("MoveLeft"):
@@ -12,4 +13,8 @@ func _physics_process(delta: float)-> void:
 		velocity.y = -speed
 	if Input.is_action_pressed("MoveDown"):
 		velocity.y = speed
+	
 	move_and_slide()
+	
+	var screenSize: Vector2 = get_viewport_rect().size
+	global_position = global_position.clamp(Vector2.ZERO, screenSize)
