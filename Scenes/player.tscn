@@ -8,6 +8,7 @@ radius = 20.0
 height = 100.0
 
 [node name="Player" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_iyeuj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
