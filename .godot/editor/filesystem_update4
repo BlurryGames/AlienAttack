@@ -5,3 +5,5 @@ res://Scenes/rocket.tscn
 res://Scripts/Rocket.gd
 res://Scenes/enemy.tscn
 res://Scripts/Enemy.gd
+res://Scenes/enemy_spawner.tscn
+res://Scripts/EnemySpawner.gd
