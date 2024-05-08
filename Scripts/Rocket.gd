@@ -10,5 +10,9 @@ func _ready()-> void:
 func _physics_process(delta: float)-> void:
 	global_position.x += speed * delta
 
+func _on_area_entered(area: Area2D)-> void:
+	queue_free()
+	area.die()
+
 func _on_screen_exited()-> void:
 	queue_free()
