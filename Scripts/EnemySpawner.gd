@@ -1,5 +1,7 @@
 class_name EnemySpawner extends Node2D
 
+signal enemySpawned(enemyInstance: Enemy)
+
 @onready var spawnPositions: Node2D = $SpawnPositions
 
 var enemyScene: PackedScene = preload("res://Scenes/enemy.tscn")
@@ -13,4 +15,4 @@ func spawnEnemy()-> void:
 	
 	var enemyInstance: Area2D = enemyScene.instantiate()
 	enemyInstance.global_position = randomSpawnPosition.global_position
-	add_child(enemyInstance)
+	enemySpawned.emit(enemyInstance)

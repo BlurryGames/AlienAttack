@@ -1,5 +1,7 @@
 class_name Enemy extends Area2D
 
+signal died
+
 @export var speed: float = 300.0
 
 func _physics_process(delta: float)-> void:
@@ -10,4 +12,5 @@ func _on_body_entered(body: Node2D)-> void:
 	die()
 
 func die()-> void:
+	died.emit()
 	queue_free()
