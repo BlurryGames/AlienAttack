@@ -10,3 +10,5 @@ res://Scripts/Player.gd
 res://Scripts/EnemySpawner.gd
 res://Scenes/hud.tscn
 res://Scripts/HUD.gd
+res://Scenes/game_over_screen.tscn
+res://Scripts/GameOverScreen.gd
