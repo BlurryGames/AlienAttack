@@ -1,9 +1,13 @@
 class_name Game extends Node2D
 
 @onready var player: Player = $Player
+@onready var hud: HUD = $UI/Hud
 
 var lives: int = 3
 var score: int = 0
+
+func _ready()-> void:
+	hud.setScoreLabel(score)
 
 func _on_area_2d_area_entered(area: Area2D)-> void:
 	area.die()
@@ -19,4 +23,4 @@ func _on_enemy_spawner_enemy_spawned(enemyInstance: Enemy)-> void:
 
 func _on_enemy_died()-> void:
 	score += 100
-	print(score)
+	hud.setScoreLabel(score)

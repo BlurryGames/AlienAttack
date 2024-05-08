@@ -8,3 +8,5 @@ res://Scripts/Enemy.gd
 res://Scripts/Game.gd
 res://Scripts/Player.gd
 res://Scripts/EnemySpawner.gd
+res://Scenes/hud.tscn
+res://Scripts/HUD.gd
