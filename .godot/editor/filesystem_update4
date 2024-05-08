@@ -5,3 +5,4 @@ res://Scenes/player.tscn
 res://Scenes/enemy.tscn
 res://Scenes/enemy_spawner.tscn
 res://Scripts/Enemy.gd
+res://Scripts/Game.gd
