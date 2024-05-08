@@ -3,6 +3,7 @@ class_name Player extends CharacterBody2D
 signal tookDamage
 
 @onready var rocketContainer: Node = $RocketContainer
+@onready var rocketShotSound: AudioStreamPlayer = $RocketShotSound
 
 var rocketScene: PackedScene = preload("res://Scenes/rocket.tscn")
 var speed: float = 300.0
@@ -33,6 +34,7 @@ func shoot()-> void:
 	rocketContainer.add_child(rocketInstance)
 	rocketInstance.global_position = global_position
 	rocketInstance.global_position.x += 80.0
+	rocketShotSound.play()
 
 func takeDamage()-> void:
 	tookDamage.emit()

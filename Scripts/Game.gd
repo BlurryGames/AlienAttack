@@ -3,6 +3,8 @@ class_name Game extends Node2D
 @onready var player: Player = $Player
 @onready var hud: HUD = $UI/Hud
 @onready var ui: CanvasLayer = $UI
+@onready var enemyHitSound: AudioStreamPlayer = $EnemyHitSound
+@onready var playerHitSound: AudioStreamPlayer = $PlayerHitSound
 
 var gameOverScene: PackedScene = preload("res://Scenes/game_over_screen.tscn")
 
@@ -17,6 +19,7 @@ func _on_area_2d_area_entered(area: Area2D)-> void:
 	area.queue_free()
 
 func _on_player_took_damage():
+	playerHitSound.play()
 	lives -= 1
 	hud.setLives(lives)
 	if lives == 0:
@@ -35,3 +38,4 @@ func _on_enemy_spawner_enemy_spawned(enemyInstance: Enemy)-> void:
 func _on_enemy_died()-> void:
 	score += 100
 	hud.setScoreLabel(score)
+	enemyHitSound.play()
