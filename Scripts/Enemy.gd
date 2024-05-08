@@ -2,7 +2,7 @@ class_name Enemy extends Area2D
 
 signal died
 
-@export var speed: float = 300.0
+@export var speed: float = 200.0
 
 func _physics_process(delta: float)-> void:
 	global_position.x -= speed * delta

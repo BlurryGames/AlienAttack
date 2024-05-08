@@ -1,3 +1,5 @@
+PathFollow2D
+Path2D
 GPUParticles2D
 AudioStreamPlayer
 Button
@@ -11,5 +13,3 @@ Timer
 Marker2D
 Node2D
 Sprite2D
-VisibleOnScreenNotifier2D
-Node
