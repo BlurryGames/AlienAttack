@@ -35,6 +35,10 @@ func _on_enemy_spawner_enemy_spawned(enemyInstance: Enemy)-> void:
 	enemyInstance.died.connect(_on_enemy_died)
 	add_child(enemyInstance)
 
+func _on_enemy_spawner_path_enemy_spawned(pathEnemyInstance: PathEnemy)-> void:
+	add_child(pathEnemyInstance)
+	pathEnemyInstance.enemy.died.connect(_on_enemy_died)
+
 func _on_enemy_died()-> void:
 	score += 100
 	hud.setScoreLabel(score)
