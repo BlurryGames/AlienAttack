@@ -8,12 +8,14 @@ var score: int = 0
 
 func _ready()-> void:
 	hud.setScoreLabel(score)
+	hud.setLives(lives)
 
 func _on_area_2d_area_entered(area: Area2D)-> void:
 	area.die()
 
 func _on_player_took_damage():
 	lives -= 1
+	hud.setLives(lives)
 	if lives == 0:
 		player.die()
 
